@@ -6,7 +6,13 @@
 	"image": "mcr.microsoft.com/devcontainers/dotnet:2-10.0-noble",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
+	"features": {
+		"ghcr.io/jsburckhardt/devcontainer-features/uv:1": {
+			"version": "latest"
+		}
+	},
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postStartCommand": "chmod +x ./.devcontainer/postCreateCommand.sh && ./.devcontainer/postCreateCommand.sh",
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [5000, 5001],
