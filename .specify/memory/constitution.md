@@ -1,50 +1,70 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+SYNC IMPACT REPORT — Constitution v1.0.0
+=========================================
+
+Version Change: None → 1.0.0 (Initial Constitution)
+Rationale: New 3-principle constitution for dotnet-tool-experiment project focusing on CLI-driven 
+development, test-first practices, and semantic versioning.
+
+Modified Principles:
+- N/A (Initial version)
+
+Added Sections:
+- Core Principles (3 principles)
+- Quality Standards
+- Governance section with amendment procedures
+
+Removed Sections:
+- N/A (Initial version)
+
+Template Sync Status:
+✅ plan-template.md: Constitution Check section references constitution correctly (no changes needed)
+✅ spec-template.md: Feature specification structure aligns with principles (no changes needed)
+✅ tasks-template.md: Test-first phases align with "Test-First Development" principle (no changes needed)
+✅ checklist-template.md: Reference integration not applicable (no changes needed)
+⚠️ agent-file-template.md: May reference constitution (verify during agent implementation)
+
+Follow-up TODOs:
+- None at this time; all placeholders replaced
+
+Validation Complete:
+✓ No unexplained bracket tokens remain
+✓ Version: 1.0.0 (semantic versioning)
+✓ Dates in ISO format: 2026-03-15
+✓ Principles are declarative and testable
+✓ Governance rules clearly stated
+-->
+
+# dotnet tool experiment Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. CLI-Driven Design
+All core functionality must be accessible and fully operable through command-line interfaces.
+Features are designed CLI-first; UI/API layers are secondary. Command arguments, options, and 
+output formats (text and JSON) must support both human operators and automation scripts.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Test-First Development (NON-NEGOTIABLE)
+Test-driven development is mandatory. Tests are written and approved BEFORE implementation begins.
+The Red-Green-Refactor cycle is strictly enforced: tests fail → implementation → tests pass → refactor.
+All public APIs require accompanying contract tests; integration tests validate cross-component workflows.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Semantic Versioning
+All releases follow Semantic Versioning (MAJOR.MINOR.PATCH). MAJOR version increments indicate
+breaking changes; MINOR for new backward-compatible features; PATCH for bug fixes and clarifications.
+All breaking changes require explicit changelog entries and migration guidance.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+## Quality Standards
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
-
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
-
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+- Code must be peer-reviewed before merge; reviews verify compliance with the three core principles.
+- Automated tests must pass and code coverage must not decrease.
+- Documentation (README, guide, API docs) must be updated in tandem with code changes.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution supersedes all conflicting practices. Amendments require documentation of rationale,
+affected principles, and migration plan. All PRs and reviews must verify explicit compliance with 
+these principles. Use runtime guidance in `.github/agents/` and project documentation for detailed 
+implementation patterns.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2026-03-15 | **Last Amended**: 2026-03-15
