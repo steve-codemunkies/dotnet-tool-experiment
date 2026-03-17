@@ -9,7 +9,8 @@
 	"features": {
 		"ghcr.io/jsburckhardt/devcontainer-features/uv:1": {
 			"version": "latest"
-		}
+		},
+		"ghcr.io/devcontainers/features/copilot-cli:latest": {}
 	},
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postStartCommand": "chmod +x ./.devcontainer/postCreateCommand.sh && ./.devcontainer/postCreateCommand.sh",
