@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RunSettings>
+  <DataCollectionRunSettings>
+    <DataCollectors>
+      <DataCollector friendlyName="XPlat Code Coverage">
+        <Configuration>
+          <Format>cobertura</Format>
+          <Exclude>[*.Tests]*,[*.Integration.Tests]*</Exclude>
+          <ExcludeByFile>**/Program.cs</ExcludeByFile>
+          <Threshold>90</Threshold>
+          <ThresholdType>Line</ThresholdType>
+          <ThresholdStat>Minimum</ThresholdStat>
+        </Configuration>
+      </DataCollector>
+    </DataCollectors>
+  </DataCollectionRunSettings>
+</RunSettings>

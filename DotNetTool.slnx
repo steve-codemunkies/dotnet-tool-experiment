@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/DotNetTool.Cli/DotNetTool.Cli.csproj" />
+    <Project Path="src/DotNetTool.Core/DotNetTool.Core.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/DotNetTool.Core.Tests/DotNetTool.Core.Tests.csproj" />
+    <Project Path="tests/DotNetTool.Integration.Tests/DotNetTool.Integration.Tests.csproj" />
+  </Folder>
+</Solution>
