@@ -1,0 +1,12 @@
+<Project>
+  <PropertyGroup>
+    <!--
+      Disable the MSBL001 build-time check that fires when MSBuild NuGet packages
+      appear in RuntimeCopyLocalItems alongside Microsoft.Build.Locator.
+      We call MSBuildLocator.RegisterDefaults() as the very first statement in
+      Program.Main(), before any assembly that references MSBuild types is loaded,
+      so the runtime conflict the check guards against cannot occur.
+    -->
+    <DisableMSBuildAssemblyCopyCheck>true</DisableMSBuildAssemblyCopyCheck>
+  </PropertyGroup>
+</Project>
